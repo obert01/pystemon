@@ -10,6 +10,7 @@ After=network.target
 User=pystemon
 Group=pystemon
 WorkingDirectory=/home/pystemon/pystemon/
+Environment="REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt"
 ExecStart=/home/pystemon/pystemon/pystemon.py -d
 Type=forking
 Restart=always
